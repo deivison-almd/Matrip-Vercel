@@ -1,0 +1,25 @@
+.style {
+
+  .style div {
+    label {
+      padding: 5px;
+    }
+  }
+
+  .textfieldStyle fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: white;
+  }
+
+  .textfieldStyle .Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: #78909c;
+  }
+
+  .textfieldStyle :hover fieldset {
+    border-color: #707070;
+  }
+
+  input,
+  label {
+    color: white;
+  }
+}

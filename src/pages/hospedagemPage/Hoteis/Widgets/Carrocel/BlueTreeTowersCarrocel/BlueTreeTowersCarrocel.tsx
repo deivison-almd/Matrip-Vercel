@@ -14,29 +14,6 @@ import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-// const images = [
-//   {
-//     label: 'Recepção',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-1.jpg'
-//   },
-//   {
-//     label: 'Quarto 2 pessoas',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-2.jpg'
-//   },
-//   {
-//     label: 'Sala de Estar',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-3.jpg'
-//   },
-//   {
-//     label: 'Culinária do Hotel',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-4.jpg'
-//   },
-// ];
-
 function BlueTreeTowersCarrocel() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -57,32 +34,35 @@ function BlueTreeTowersCarrocel() {
   return (
     <div>
       <div className="bodyCarousel">
-        <AutoPlaySwipeableViews
-          className="styleTransition"
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={activeStep}
-          onChangeIndex={handleStepChange}
-          enableMouseEvents
-        >
-          {BlueTreeTowers.map((step, index) => (
-            <div key={step.label}>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    height: 255,
-                    display: 'block',
-                    maxWidth: 400,
-                    overflow: 'hidden',
-                    width: '100%',
-                  }}
-                  src={step.imgPath}
-                  alt={step.label}
-                />
-              ) : null}
-            </div>
-          ))}
-        </AutoPlaySwipeableViews>
+        <a href="/blueTreeTowers">
+          <AutoPlaySwipeableViews
+            className="styleTransition"
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+          >
+            {BlueTreeTowers.map((step, index) => (
+              <div key={step.label}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    component="img"
+                    sx={{
+                      height: 255,
+                      display: 'block',
+                      maxWidth: '100%',
+                      overflow: 'hidden',
+                      width: '100%',
+                    }}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+        </a>
+
         <MobileStepper
           steps={maxSteps}
           position="static"
@@ -124,26 +104,24 @@ function BlueTreeTowersCarrocel() {
 export default BlueTreeTowersCarrocel;
 
 export const BlueTreeTowers = [
-    {
-      label: 'Recepção',
-      imgPath: '/images/hoteis/BlueTreeTowers/foto-1.png',
-    },
-    {
-      label: 'Quarto 2 pessoas',
-      imgPath: '/images/hoteis/BlueTreeTowers/foto-2.jpg',
-    },
-    {
-      label: 'Sala de Estar',
-      imgPath: '/images/hoteis/BlueTreeTowers/foto-3.jpg',
-    },
-    {
-      label: 'Culinária do Hotel',
-      imgPath: '/images/hoteis/BlueTreeTowers/foto-4.png',
-    },
-    {
-      label: 'Culinária do Hotel',
-      imgPath: '/images/hoteis/BlueTreeTowers/foto-5.jpg',
-    },
-  ];
-
-
+  {
+    label: 'Recepção',
+    imgPath: '/images/hoteis/BlueTreeTowers/foto-1.png',
+  },
+  {
+    label: 'Quarto 2 pessoas',
+    imgPath: '/images/hoteis/BlueTreeTowers/foto-2.jpg',
+  },
+  {
+    label: 'Sala de Estar',
+    imgPath: '/images/hoteis/BlueTreeTowers/foto-3.jpg',
+  },
+  {
+    label: 'Culinária do Hotel',
+    imgPath: '/images/hoteis/BlueTreeTowers/foto-4.png',
+  },
+  {
+    label: 'Culinária do Hotel',
+    imgPath: '/images/hoteis/BlueTreeTowers/foto-5.jpg',
+  },
+];

@@ -4,15 +4,10 @@ import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 
 const labels: { [index: string]: string } = {
-  // 0.5: 'Useless',
   1: 'Péssimo',
-  // 1.5: 'Poor',
   2: 'Ruim',
-  // 2.5: 'Ok',
   3: 'Médio',
-  // 3.5: 'Good',
   4: 'Bom',
-  // 4.5: 'Excellent',
   5: 'Exelente',
 };
 
@@ -21,7 +16,7 @@ function getLabelText(value: number) {
 }
 
 export default function HoverRating() {
-  const [value, setValue] = React.useState<number | null>(2);
+  const [value, setValue] = React.useState<number | null>(4);
   const [hover, setHover] = React.useState(-1);
 
   return (

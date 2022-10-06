@@ -1,11 +1,7 @@
-// import './carrocel.scss';
-
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
-// import Paper from '@mui/material/Paper';
-// import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -14,10 +10,10 @@ import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function SoftWinHotelCarrocel() {
+function SuiteExecutivaCarrocel() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps =  SoftWinHotel.length;
+  const maxSteps = SuiteExecutiva.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -33,33 +29,36 @@ function SoftWinHotelCarrocel() {
 
   return (
     <div>
-      <div className="bodyCarousel">
-        <AutoPlaySwipeableViews
-          className="styleTransition"
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={activeStep}
-          onChangeIndex={handleStepChange}
-          enableMouseEvents
-        >
-          { SoftWinHotel.map((step, index) => (
-            <div key={step.label}>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    height: 255,
-                    display: 'block',
-                    maxWidth: 400,
-                    overflow: 'hidden',
-                    width: '100%',
-                  }}
-                  src={step.imgPath}
-                  alt={step.label}
-                />
-              ) : null}
-            </div>
-          ))}
-        </AutoPlaySwipeableViews>
+      <div className="quartoCarousel">
+        <a href="/hotelLuzeiros">
+          <AutoPlaySwipeableViews
+            className="styleTransition"
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+          >
+            {SuiteExecutiva.map((step, index) => (
+              <div key={step.label}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    component="img"
+                    sx={{
+                      height: 250,
+                      display: 'block',
+                      maxWidth: '100%',
+                      overflow: 'hidden',
+                      width: '100%',
+                    }}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+        </a>
+
         <MobileStepper
           steps={maxSteps}
           position="static"
@@ -98,27 +97,27 @@ function SoftWinHotelCarrocel() {
   );
 }
 
-export default SoftWinHotelCarrocel;
+export default SuiteExecutivaCarrocel;
 
-export const  SoftWinHotel = [
+export const SuiteExecutiva = [
   {
     label: 'Recepção',
-    imgPath: '/images/hoteis/SoftWinHotel/foto-1.jpg',
+    imgPath:
+      '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-1.jpg',
   },
   {
     label: 'Quarto 2 pessoas',
-    imgPath: '/images/hoteis/SoftWinHotel/foto-2.jpg',
+    imgPath:
+      '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-2.jpg',
   },
   {
-    label: 'Sala de Estar',
-    imgPath: '/images/hoteis/SoftWinHotel/foto-3.jpg',
+    label: '',
+    imgPath:
+      '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-3.jpg',
   },
   {
     label: 'Culinária do Hotel',
-    imgPath: '/images/hoteis/SoftWinHotel/foto-4.jpg',
-  },
-  {
-    label: 'Culinária do Hotel',
-    imgPath: '/images/hoteis/SoftWinHotel/foto-5.jpg',
+    imgPath:
+      '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-4.jpg',
   },
 ];

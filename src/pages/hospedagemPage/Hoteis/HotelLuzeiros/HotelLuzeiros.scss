@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ededed;
+
+  .layoutContainer {
+    .topo {
+      padding-top: 200px;
+      background-image: url(../../../../../public/images/hoteis/hotel-luzeiros.jpg);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+      .topoHotel {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .bgCheckin {
+        background-color: #1e2225e0;
+        padding: 10px 0;
+        // opacity: 10%;
+      }
+
+      .checkInStyle {
+        align-items: center;
+        // flex-direction: row;
+      }
+    }
+
+    .titleHotel {
+      color: gold;
+      text-shadow: 2px 2px 3px #057D73;
+      text-align: center;
+      font-size: 40px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    .descricaoHotel {
+      width: 50%;
+      text-align: center;
+      margin: auto;
+      font-size: 15px;
+      word-spacing: 3px;
+      color: #586373;
+      // font-style: italic;
+    }
+
+    .hotelLink {
+      margin: 0px 60px;
+      // background-color: #121225;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      text-decoration: none;
+
+      .conteudoLink {
+        margin-bottom:  500px;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        text-align: left;
+        width: 300px;
+        background-color: #ffffff;
+
+        a {
+          text-decoration: none;
+          color: #262329;
+        }
+
+        img {
+          // float: initial;
+          width: 400px;
+        }
+        p {
+          padding: 15px 10px;
+          text-decoration: none;
+          text-align: left;
+          width: 280px;
+          font-size: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .inlineText {
+            margin: 0 a;
+            padding-bottom: 10px;
+            font-size: 14px;
+
+            .calendar {
+              font-size: 16px;
+            }
+          }
+        }
+        .nameHotel {
+          color: #057D73;
+          font-size: 25px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

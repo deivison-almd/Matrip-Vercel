@@ -1,17 +1,32 @@
 .gridItens {
   height: 700px;
-  width: 1400px;
+  width: 1300px;
   margin: 40px auto;
-  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: #FFFFFF;
-
 
   .gridPhotos {
-    width: 50%;
+    width: 47%;
     height: 70%;
     float: right;
     margin: 50px;
     overflow-y: scroll;
+  }
+
+  .conteudoReserva {
+    width: 35%;
+    float: left;
+    padding: 30px;
+    border: 1px solid #B3BCC7;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-top: 50px;
+
+    .nomeQuarto {
+      width: 300px;
+      padding: 40px;
+      font-weight: bold;
+      font-size: 25px;
+      color: #057D73;
+    }
   }
 }
 

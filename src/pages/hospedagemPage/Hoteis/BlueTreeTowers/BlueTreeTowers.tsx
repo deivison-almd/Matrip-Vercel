@@ -1,6 +1,5 @@
 // import Carrocel from './Widgets/Carrocel/Carrocel';
-import './hoteis.scss'
-import Galeria from './Widgets/Galeria/Galeria';
+import Galeria from '../Widgets/Galeria/Galeria';
 
 function IstoEPousada() {
   return (

@@ -1,0 +1,70 @@
+.Itens {
+  height: 700px;
+  width: 1300px;
+  margin: 40px auto;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ffffff;
+
+  .containerReserva {
+    width: 30%;
+    float: left;
+    padding: 30px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100px;
+
+    .descricaoStyle {
+      margin-top: 50px;
+    }
+    
+    .boxShadow {
+      margin-left: 50px;
+      width: 100%;
+      // float: left;
+      border: 1px solid #b3bcc7;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .nomeQuarto {
+      width: 300px;
+      padding-top: 30px;
+      padding-left: 25%;
+      font-weight: bold;
+      font-size: 25px;
+      color: #057d73;
+      padding-bottom: 20px;
+    }
+
+    .price {
+      margin: 30px 0;
+      width: 300px;
+      padding-left: 25px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #505050;
+    }
+
+    .titleDescricao {
+      text-align: justify;
+      width: 100%;
+      font-weight: 700;
+      margin: 30px 0;
+      margin-left: 50px;
+      color: #505050;
+    }
+
+    .textDescricao {
+      margin-top: 20px;
+      margin-left: 50px;
+      text-align: justify;
+      font-size: 15px;
+      width: 100%;
+      font-weight: 100;
+      color: #404040;
+    }
+  }
+}
+
+//sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}

@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-operators */
 import React, { cloneElement, Component, Children } from 'react';
 import { findDOMNode, createPortal } from 'react-dom';
 import glam from 'glam';
@@ -620,6 +621,7 @@ var navigationItemCSS = function navigationItemCSS(_ref2) {
     top: '50%',
     transition: 'background-color 200ms',
     width: BUTTON_SIZE
+  // eslint-disable-next-line no-sequences
   }, defineProperty(_ref3, align, 20), defineProperty(_ref3, '&:hover', {
     background: 'rgba(255, 255, 255, 0.3)'
   }), defineProperty(_ref3, '&:active', {

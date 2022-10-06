@@ -1,11 +1,8 @@
-// import './carrocel.scss';
 
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
-// import Paper from '@mui/material/Paper';
-// import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -14,33 +11,10 @@ import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-// const images = [
-//   {
-//     label: 'Recepção',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-1.jpg'
-//   },
-//   {
-//     label: 'Quarto 2 pessoas',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-2.jpg'
-//   },
-//   {
-//     label: 'Sala de Estar',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-3.jpg'
-//   },
-//   {
-//     label: 'Culinária do Hotel',
-//     imgPath:
-//     '/images/hoteis/SoftWinHotel/foto-4.jpg'
-//   },
-// ];
-
-function HotelLuzeirosCarrocel() {
+function SuitePresidencialCarrocel() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = HotelLuzeiros.length;
+  const maxSteps = SuitePresidencial.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -56,7 +30,7 @@ function HotelLuzeirosCarrocel() {
 
   return (
     <div>
-      <div className="bodyCarousel">
+      <div className="quartoCarousel">
         <a href="/hotelLuzeiros">
           <AutoPlaySwipeableViews
             className="styleTransition"
@@ -65,13 +39,13 @@ function HotelLuzeirosCarrocel() {
             onChangeIndex={handleStepChange}
             enableMouseEvents
           >
-            {HotelLuzeiros.map((step, index) => (
+            {SuitePresidencial.map((step, index) => (
               <div key={step.label}>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Box
                     component="img"
                     sx={{
-                      height: 255,
+                      height: 250,
                       display: 'block',
                       maxWidth: '100%',
                       overflow: 'hidden',
@@ -124,28 +98,24 @@ function HotelLuzeirosCarrocel() {
   );
 }
 
-export default HotelLuzeirosCarrocel;
+export default SuitePresidencialCarrocel;
 
-export const HotelLuzeiros = [
+export const SuitePresidencial = [
   {
     label: 'Recepção',
-    imgPath: '/images/hoteis/HotelLuzeiros/foto-1.jpg',
+    imgPath: '/images/hoteis/HotelLuzeiros/SuitePresidencial/quarto-cama.jpg',
   },
   {
     label: 'Quarto 2 pessoas',
-    imgPath: '/images/hoteis/HotelLuzeiros/foto-2.jpg',
+    imgPath: '/images/hoteis/HotelLuzeiros/SuitePresidencial/sala-de-estar.jpg',
   },
   {
     label: 'Sala de Estar',
-    imgPath: '/images/hoteis/HotelLuzeiros/foto-3.jpg',
+    imgPath: '/images/hoteis/HotelLuzeiros/SuitePresidencial/sala-de-jantar.jpg',
   },
   {
     label: 'Culinária do Hotel',
-    imgPath: '/images/hoteis/HotelLuzeiros/foto-4.jpg',
-  },
-  {
-    label: 'Culinária do Hotel',
-    imgPath: '/images/hoteis/HotelLuzeiros/foto-5.jpg',
+    imgPath: '/images/hoteis/HotelLuzeiros/SuitePresidencial/sala-principal.jpg',
   },
 ];
 

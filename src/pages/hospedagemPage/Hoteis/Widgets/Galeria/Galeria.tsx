@@ -8,7 +8,7 @@ export default function Galeria() {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback((_event: any, { photo, index}: any ) => {
+  const openLightbox = useCallback((_event: any, { photo, index }: any) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -20,47 +20,47 @@ export default function Galeria() {
 
   const photos = [
     {
-      src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599',
+      src: '/images/hoteis/HotelLuzeiros/foto-1.jpg',
       width: 4,
       height: 3,
     },
     {
-      src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799',
-      width: 1,
+      src: '/images/hoteis/HotelLuzeiros/foto-2.jpg',
+      width: 2,
       height: 1,
     },
     {
-      src: 'https://source.unsplash.com/qDkso9nvCg0/600x799',
+      src: '/images/hoteis/HotelLuzeiros/foto-3.jpg',
+      width: 4,
+      height: 4,
+    },
+    {
+      src: '/images/hoteis/HotelLuzeiros/foto-4.jpg',
+      width: 3,
+      height: 3,
+    },
+    {
+      src: '/images/hoteis/HotelLuzeiros/foto-5.jpg',
+      width: 5,
+      height: 4,
+    },
+    {
+      src: '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-1.jpg',
+      width: 4,
+      height: 2,
+    },
+    {
+      src: '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-2.jpg',
       width: 3,
       height: 4,
     },
     {
-      src: 'https://source.unsplash.com/iecJiKe_RNg/600x799',
-      width: 3,
-      height: 4,
-    },
-    {
-      src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799',
-      width: 3,
-      height: 4,
-    },
-    {
-      src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599',
+      src: '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-3.jpg',
       width: 4,
       height: 3,
     },
     {
-      src: 'https://source.unsplash.com/zh7GEuORbUw/600x799',
-      width: 3,
-      height: 4,
-    },
-    {
-      src: 'https://source.unsplash.com/PpOHJezOalU/800x599',
-      width: 4,
-      height: 3,
-    },
-    {
-      src: 'https://source.unsplash.com/I1ASdgphUH4/800x599',
+      src: '/images/hoteis/HotelLuzeiros/SuiteExecutiva/suite-executiva-4.jpg',
       width: 4,
       height: 3,
     },
@@ -68,6 +68,8 @@ export default function Galeria() {
 
   return (
     <div className="gridItens">
+     
+
       <Box className="gridPhotos" title="Clique para Ampliar">
         <Gallery photos={photos} onClick={openLightbox} />
         <ModalGateway>
