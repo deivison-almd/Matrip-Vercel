@@ -1,0 +1,26 @@
+{
+  "git.enabled": true,
+  "files.exclude": {
+    ".gitignore": true,
+    ".vscode": true,
+    "menu-v2": true,
+    "dtmoney": true,
+    "node_modules": false,
+    "package-lock.json": false,
+    "**/package.json": false,
+    "project": true,
+    "public": false,
+    "**/yarn.lock": true,
+    "**/next.config.js": false,
+    "**/tsconfig.json": false,
+    "**/next-env.d.ts": true,
+    "**/.gitignore": true,
+    "**/db.json": false,
+    "**/.eslintrc.json": true,
+    "**/.next": false,
+    "**/node_modules": false,
+    "**/public": false,
+    "**/react-images": true,
+    
+  }
+}

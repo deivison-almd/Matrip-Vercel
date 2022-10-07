@@ -19,7 +19,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import Galeria from '../../Widgets/Galeria/Galeria';
 import './reserva.scss';
 import { useEffect, useState } from 'react';
-import { type } from 'os';
+// import { type } from 'os';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
