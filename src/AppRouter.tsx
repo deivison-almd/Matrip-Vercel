@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/HomePage/HomePage';
 
 // import PrimarySearchAppBar from './App';
-import HomePage from './pages/HomePage/HomePage';
 import Hospedagem from './pages/hospedagemPage/hospedagem';
 import BlueTreeTowers from './pages/hospedagemPage/Hoteis/BlueTreeTowers/BlueTreeTowers';
 import HotelLuzeiros from './pages/hospedagemPage/Hoteis/HotelLuzeiros/HotelLuzeiros';

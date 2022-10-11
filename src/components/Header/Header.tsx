@@ -1,4 +1,4 @@
-import '../Header/header.scss';
+import './header.scss';
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -138,16 +138,16 @@ export default function Header() {
               src="./icons/logo-matrip.png"
               alt="logo matrip"
             />
-            <Search className="searchIcon">
+            {/* <Search className="searchIcon">
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase placeholder="Search…" />
-            </Search>
-            <IconButton href="/" title='Home'>
-              <HomeIcon className="navIcon" />
+            </Search> */}
+            <IconButton href="/" title="Home">
+              <HomeIcon style={{ marginLeft: 40 }} className="navIcon" />
             </IconButton>
-            <IconButton href="./hospedagem" title='Hospedagem'>
+            <IconButton href="./hospedagem" title="Hospedagem">
               <HotelIcon className="navIcon" />
             </IconButton>
             <Box sx={{ flexGrow: 1 }} />
@@ -166,9 +166,7 @@ export default function Header() {
               >
                 <AccountCircle className="widgetIcon" />
               </IconButton>
-              <IconButton>
-                <MenuIcon className="menuIcon" />
-              </IconButton>
+              <IconButton>{/* <MenuIcon className="menuIcon" /> */}</IconButton>
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
               <IconButton
