@@ -17,14 +17,15 @@
     .descricaoStyle {
       margin-top: 50px;
     }
-    
+
     .boxShadow {
       margin-left: 50px;
-      width: 100%;
+      padding-bottom: 10px;
+      width: 110%;
       // float: left;
       border: 1px solid #b3bcc7;
       border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
     }
 
     .nomeQuarto {

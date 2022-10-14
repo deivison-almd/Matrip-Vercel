@@ -148,5 +148,3 @@ export const HotelLuzeiros = [
     imgPath: '/images/hoteis/HotelLuzeiros/foto-5.jpg',
   },
 ];
-
-

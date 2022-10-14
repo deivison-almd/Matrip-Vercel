@@ -16,9 +16,7 @@ export default function Hospedagem() {
       <div className="topo">
         <div className="topoHotel"></div>
         <div className="bgCheckin">
-          <p className="checkInStyle">
-            <CheckIn />
-          </p>
+          <p className="checkInStyle">{/* <CheckIn /> */}</p>
         </div>
       </div>
 
@@ -39,9 +37,9 @@ export default function Hospedagem() {
           <a href="/reserva">
             <p>
               <span>R$ 120,00/por pessoa</span>
-              <span className="inlineText">
+              {/* <span className="inlineText">
                 <CalendarMonthIcon className="calendar" /> 5 Dias/6 Noites
-              </span>
+              </span> */}
             </p>
             {/* <RoomIcon style={{ fontSize: '25px', color: '#FF7F47' }} /> */}
             <span className="nameHotel"> Suíte Presidencial</span>
@@ -55,9 +53,9 @@ export default function Hospedagem() {
           <a href="/hotelLuzeiros">
             <p>
               R$ 100,00/por pessoa
-              <span className="inlineText">
+              {/* <span className="inlineText">
                 <CalendarMonthIcon className="calendar" /> 5 Dias/6 Noites
-              </span>
+              </span> */}
             </p>
             {/* <RoomIcon style={{ fontSize: '25px', color: '#FF7F47' }} /> */}
             <span className="nameHotel"> Suíte Executiva </span>
@@ -72,9 +70,9 @@ export default function Hospedagem() {
             <div>
               <p>
                 R$ 85,00/por pessoa
-                <span className="inlineText">
+                {/* <span className="inlineText">
                   <CalendarMonthIcon className="calendar" /> 5 Dias/6 Noites
-                </span>
+                </span> */}
               </p>
               {/* <RoomIcon style={{ fontSize: '25px', color: '#FF7F47' }} /> */}
               <span className="nameHotel"> Suíte Junior</span>
@@ -90,9 +88,9 @@ export default function Hospedagem() {
             <div>
               <p>
                 R$ 110,00/por pessoa
-                <span className="inlineText">
+                {/* <span className="inlineText">
                   <CalendarMonthIcon className="calendar" /> 5 Dias/6 Noites
-                </span>
+                </span> */}
               </p>
               {/* <RoomIcon style={{ fontSize: '25px', color: '#FF7F47' }} /> */}
               <span className="nameHotel"> Suíte Estúdio</span>

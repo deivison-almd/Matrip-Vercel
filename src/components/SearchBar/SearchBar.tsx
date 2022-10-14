@@ -8,6 +8,36 @@ axios.defaults.baseURL = 'http://10.110.18.181';
 axios.defaults.headers.get['Content-Type'] = 'application/json;charset=utf-8';
 axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
 
+const UF = [
+  { nome: 'Acre', sigla: 'AC' },
+  { nome: 'Alagoas', sigla: 'AL' },
+  { nome: 'Amapá', sigla: 'AP' },
+  { nome: 'Amazonas', sigla: 'AM' },
+  { nome: 'Bahia', sigla: 'BA' },
+  { nome: 'Ceará', sigla: 'CE' },
+  { nome: 'Distrito Federal', sigla: 'DF' },
+  { nome: 'Espírito Santo', sigla: 'ES' },
+  { nome: 'Goiás', sigla: 'GO' },
+  { nome: 'Maranhão', sigla: 'MA' },
+  { nome: 'Mato Grosso', sigla: 'MT' },
+  { nome: 'Mato Grosso do Sul', sigla: 'MS' },
+  { nome: 'Minas Gerais', sigla: 'MG' },
+  { nome: 'Pará', sigla: 'PA' },
+  { nome: 'Paraíba', sigla: 'PB' },
+  { nome: 'Paraná', sigla: 'PR' },
+  { nome: 'Pernambuco', sigla: 'PE' },
+  { nome: 'Piauí', sigla: 'PI' },
+  { nome: 'Rio de Janeiro', sigla: 'RJ' },
+  { nome: 'Rio Grande do Norte', sigla: 'RN' },
+  { nome: 'Rio Grande do Sul', sigla: 'RS' },
+  { nome: 'Rondônia', sigla: 'RO' },
+  { nome: 'Roraima', sigla: 'RR' },
+  { nome: 'Santa Catarina', sigla: 'SC' },
+  { nome: 'São Paulo', sigla: 'SP' },
+  { nome: 'Sergipe', sigla: 'SE' },
+  { nome: 'Tocantins', sigla: 'TO' },
+];
+
 interface filter {
   map(arg0: (item: any) => JSX.Element): import('react').ReactNode;
   id: number;
@@ -27,6 +57,20 @@ export default function SearchBar(this: any) {
       .then((response) => response.json())
       .then((json) => setMunicipios(json));
   }, []);
+
+  const handleChange = (value: any) => {
+    const select = document.getElementById('lista-estados');
+
+    select?.addEventListener('change', function () {
+      console.log((select as HTMLSelectElement).value);
+    });
+  };
+
+  // const select = document.getElementById('lista-estados');
+
+  // select?.addEventListener('change', function () {
+  //   console.log((select as HTMLSelectElement).value);
+  // });
 
   return (
     <div
@@ -60,13 +104,20 @@ export default function SearchBar(this: any) {
 
           {/* <BaseInput type="date" /> */}
 
-          <Select>
-            <option value="" disabled selected>
-              Estados UF
-            </option>
-            {estados?.map((item: any) => (
+          <Select
+            onChange={handleChange}
+            placeholder="Selecione o Estado"
+            name="estados"
+            id="lista-estados"
+          >
+            {UF?.map((item: any) => (
               <>
-                <option value="MA">{item?.name}</option>
+                <option
+                  value={`${item?.sigla} - ${item?.nome}`}
+                  id={item?.sigla}
+                >
+                  {item?.sigla} - {item?.nome}
+                </option>
               </>
             ))}
           </Select>

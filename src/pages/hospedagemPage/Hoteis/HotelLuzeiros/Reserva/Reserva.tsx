@@ -19,7 +19,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import Galeria from '../../Widgets/Galeria/Galeria';
 import './reserva.scss';
 import { useEffect, useState } from 'react';
-// import { type } from 'os';
+import ModalCad from '../../../../../components/Modal/Modal';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -136,7 +136,6 @@ export default function Reserva() {
               />
             </Stack>
           </LocalizationProvider>
-
           <Accordion
             expanded={expanded === 'panel1'}
             onChange={handleColapse('panel1')}
@@ -145,27 +144,33 @@ export default function Reserva() {
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <Typography>Hospedes</Typography>
+              <Typography style={{ fontWeight: 'bold', fontSize: '14px' }}>
+                HOSPEDES
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <span>Adultos</span>
+              <span style={{ fontWeight: '600', paddingLeft: '20px' }}>
+                Adultos
+              </span>
               <Box style={{ float: 'right' }}>
                 <Button onClick={removeAdult}>
                   <RemoveIcon />
                 </Button>
-                <span>{contador}</span>
+                <span style={{ fontWeight: '600' }}>{contador}</span>
                 <Button onClick={addAdult}>
                   <AddIcon />
                 </Button>
               </Box>
             </AccordionDetails>
             <AccordionDetails style={{ marginBottom: 5 }}>
-              <span>Crianças</span>
+              <span style={{ fontWeight: '600', paddingLeft: '20px' }}>
+                Crianças
+              </span>
               <Box style={{ float: 'right' }}>
                 <Button onClick={removeChilde}>
                   <RemoveIcon />
                 </Button>
-                <span>{contador2}</span>
+                <span style={{ fontWeight: '600' }}>{contador2}</span>
                 <Button onClick={addChilde}>
                   <AddIcon />
                 </Button>
@@ -173,7 +178,9 @@ export default function Reserva() {
             </AccordionDetails>
           </Accordion>
         </Box>
-
+        <Box style={{ marginLeft: 50, width: '100%' }}>
+          <ModalCad />
+        </Box>
         <Box className="descricaoStyle">
           <h3 className="titleDescricao">DESCRIÇÃO</h3>
           <p className="textDescricao">
