@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.scss';
 import App from './App';
-import Crud from './components/Crud/Crud';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './pages/Crud/serviceWorker';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Crud />
+    <App />
   </React.StrictMode>,
 );
 

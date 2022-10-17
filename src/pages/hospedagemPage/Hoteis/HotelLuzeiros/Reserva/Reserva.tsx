@@ -179,7 +179,19 @@ export default function Reserva() {
           </Accordion>
         </Box>
         <Box style={{ marginLeft: 50, width: '100%' }}>
-          <ModalCad />
+          <a href="/crud" style={{ textDecoration: 'none' }}>
+            <Button
+              style={{
+                margin: '50px 0',
+                width: '100%',
+                backgroundColor: '#050525',
+              }}
+              className="buttonReserva"
+              variant="contained"
+            >
+              Reservar
+            </Button>
+          </a>
         </Box>
         <Box className="descricaoStyle">
           <h3 className="titleDescricao">DESCRIÇÃO</h3>

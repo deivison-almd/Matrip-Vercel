@@ -121,9 +121,11 @@ export default function Hospedagem() {
           {/* <HotelLuzeirosCarrocel /> */}
           <a href="/hotelLuzeiros">
             <img
-              src="/images/hoteis/porto-preguicas.jpg"
+              src="/images/hoteis/HotelLuzeiros/foto-1.jpg"
               alt="porto preguicas"
             />
+            <br />
+
             {/* <img src="/images/hoteis/istoepousada.jpg" alt="Hotel Luzeiro" /> */}
             {/* <p>
               R$ 100,00/por pessoa

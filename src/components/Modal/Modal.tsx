@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useState } from 'react';
+import Crud from '../../pages/Crud/Crud';
 
 const modalStyle = {
   position: 'absolute' as 'absolute',
@@ -30,19 +31,23 @@ export default function ModalCad() {
 
   return (
     <div>
-      <Button
-        style={{
-          margin: '50px 0',
-          width: '100%',
-          backgroundColor: '#050525',
-        }}
-        className="buttonReserva"
-        variant="contained"
-        onClick={handleOpen}
-      >
-        Reservar
-      </Button>
-      <Modal
+      {/* <Crud /> */}
+
+      {/* <a href="/checkIn"> */}
+      {/* <Button
+          style={{
+            margin: '50px 0',
+            width: '100%',
+            backgroundColor: '#050525',
+          }}
+          className="buttonReserva"
+          variant="contained"
+          onClick={handleOpen}
+        > */}
+      {/* Reservar */}
+      {/* </Button> */}
+      {/* </a> */}
+      {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
@@ -98,8 +103,8 @@ export default function ModalCad() {
                   label="Contato"
                   placeholder="(xx)-xxxx-xxxx"
                 />
-              </Box>
-              <Box
+              </Box> */}
+      {/* <Box
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
@@ -111,12 +116,12 @@ export default function ModalCad() {
                   id="demo-helper-text-misaligned"
                   label="CPF"
                   placeholder="xxx.xxx.xxx-xx"
-                />
-                {/* <InputMask
+                /> */}
+      {/* <InputMask
                         mask="999.999.999-99"
                         placeholder="Digite seu cpf"
                       /> */}
-              </Box>
+      {/* </Box>
             </Typography>
             <div style={{ marginTop: '20px' }}>
               <Button
@@ -134,8 +139,7 @@ export default function ModalCad() {
             </div>
           </Box>
         </Fade>
-      </Modal>
-      ;
+      </Modal> */}
     </div>
   );
 }

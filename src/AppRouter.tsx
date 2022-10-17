@@ -1,4 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes } from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Crud from './pages/Crud/Crud';
 import { HomePage } from './pages/HomePage/HomePage';
 
 // import PrimarySearchAppBar from './App';
@@ -13,19 +15,15 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Paginas */}
-
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="home" element={<PrimarySearchAppBar />} /> */}
         <Route path="hospedagem" element={<Hospedagem />} />
-
-        {/* Hoteis */}
 
         <Route path="softWinHotel" element={<SoftWinHotel />} />
         <Route path="blueTreeTowers" element={<BlueTreeTowers />} />
         <Route path="hotelLuzeiros" element={<HotelLuzeiros />} />
         <Route path="portoPreguicas" element={<PortoPreguicas />} />
         <Route path="reserva" element={<Reserva />} />
+        <Route path="/checkn" element={<Crud />} />
       </Routes>
     </BrowserRouter>
   );
